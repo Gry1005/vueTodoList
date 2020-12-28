@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Vue index</title>
+		
+		<script src='./Vue.js'></script>
+			
+		</script>
+	</head>
+	
+	<body>
+		
+		<div id="root">
+			<div>hello {{msg}} !</div>
+			<h1 v-text='number'></h1>
+			<div @click="handleClick">{{content}}</div>
+		
+		</div>
+		
+		<script>
+			new Vue({
+				el:"#root",
+				data:{
+					msg:'world',
+					number:123,
+					content:'hello'
+				},
+				methods:{
+					handleClick:function(){
+						if(this.content=='hello')
+						{
+							this.content='world'
+						}
+						else
+						{
+							this.content='hello'
+						}
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>
